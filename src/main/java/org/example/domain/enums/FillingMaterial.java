@@ -3,6 +3,6 @@ package org.example.domain.enums;
 public enum FillingMaterial {
     DOWN,
     FEATHERS,
-    SYNTHETICFIBERS,
+    SYNTHETIC_FIBERS,
     OTHERS
 }
