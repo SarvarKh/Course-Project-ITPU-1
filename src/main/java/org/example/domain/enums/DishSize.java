@@ -1,6 +1,6 @@
 package org.example.domain.enums;
 
-public enum Size {
+public enum DishSize {
     SMALL,
     MEDIUM,
     LARGE

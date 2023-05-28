@@ -1,14 +1,16 @@
 package org.example.domain;
 
 import org.example.domain.enums.Material;
-import org.example.domain.enums.Size;
+import org.example.domain.enums.BeddingSize;
 import org.example.domain.enums.Style;
 
-public abstract class Inventory {
+import java.io.Serializable;
+
+public abstract class Inventory implements Serializable {
+    private int id;
     private long price;
     private int weight;
     private Material material;
-    private Size size;
     private String color;
     private Style style;
 
@@ -36,14 +38,6 @@ public abstract class Inventory {
         this.material = material;
     }
 
-    public Size getSize() {
-        return size;
-    }
-
-    public void setSize(Size size) {
-        this.size = size;
-    }
-
     public String getColor() {
         return color;
     }
@@ -66,7 +60,6 @@ public abstract class Inventory {
                 "price=" + price +
                 ", weight=" + weight +
                 ", material=" + material +
-                ", size=" + size +
                 ", color='" + color + '\'' +
                 ", style=" + style +
                 '}';
