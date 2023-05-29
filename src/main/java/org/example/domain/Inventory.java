@@ -13,14 +13,19 @@ public abstract class Inventory implements Serializable {
     private final Material material;
     private final Color color;
     private final Style style;
+    private final int washingDurability;
+    private final int storageDurability;
 
-    public Inventory(int id, long price, int weight, Material material, Color color, Style style) {
+    public Inventory(int id, long price, int weight, Material material, Color color, Style style,
+                     int washingDurability, int storageDurability) {
         this.id = id;
         this.price = price;
         this.weight = weight;
         this.material = material;
         this.color = color;
         this.style = style;
+        this.washingDurability = washingDurability;
+        this.storageDurability = storageDurability;
     }
 
     public int getId() {
@@ -47,6 +52,14 @@ public abstract class Inventory implements Serializable {
         return style;
     }
 
+    public int getWashingDurability() {
+        return washingDurability;
+    }
+
+    public int getStorageDurability() {
+        return storageDurability;
+    }
+
     @Override
     public String toString() {
         return "Inventory{" +
@@ -56,6 +69,8 @@ public abstract class Inventory implements Serializable {
                 ", material=" + material +
                 ", color=" + color +
                 ", style=" + style +
+                ", washingDurability=" + washingDurability +
+                ", storageDurability=" + storageDurability +
                 '}';
     }
 }

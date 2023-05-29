@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e03cfc8-3f86-4eb0-ae07-164bb75c7c27" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/Durability.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/Bedclothing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/Bedclothing.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/Dish.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/Dish.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/Inventory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +21,7 @@
       <list>
         <option value="Class" />
         <option value="Enum" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -65,7 +68,7 @@
       <updated>1684823110604</updated>
       <workItem from="1684823111625" duration="1246000" />
       <workItem from="1684840088470" duration="612000" />
-      <workItem from="1685294356299" duration="9139000" />
+      <workItem from="1685294356299" duration="11095000" />
     </task>
     <servers />
   </component>
