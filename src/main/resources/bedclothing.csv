@@ -1,0 +1,4 @@
+id; price; weight; beddingMaterial; color; style; washingDurability; storageDurability; beddingSize; fillingMaterial
+1; 200; 1; COTTON; WHITE; MODERN; 100; 3; TWIN; DOWN
+2; 300; 1; SILK; BLUE; TRADITIONAL; 150; 4; KING; FEATHERS
+3; 250; 1; COTTON; RED; RUSTIC; 120; 4; FULL; SYNTHETIC_FIBERS
