@@ -1,4 +1,4 @@
-package org.example.domain.enums;
+package org.example.domain.parameters;
 
 public enum Material {
     COTTON,

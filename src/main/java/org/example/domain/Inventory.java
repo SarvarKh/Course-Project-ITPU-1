@@ -1,7 +1,7 @@
 package org.example.domain;
 
-import org.example.domain.enums.Material;
-import org.example.domain.enums.Style;
+import org.example.domain.parameters.Material;
+import org.example.domain.parameters.Style;
 
 import java.io.Serializable;
 

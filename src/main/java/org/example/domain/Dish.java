@@ -1,6 +1,6 @@
 package org.example.domain;
 
-import org.example.domain.enums.*;
+import org.example.domain.parameters.*;
 
 public class Dish extends Inventory {
     private final FoodSafety foodSafety;

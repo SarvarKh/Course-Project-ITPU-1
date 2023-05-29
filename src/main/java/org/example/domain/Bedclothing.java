@@ -1,9 +1,9 @@
 package org.example.domain;
 
-import org.example.domain.enums.BeddingSize;
-import org.example.domain.enums.FillingMaterial;
-import org.example.domain.enums.Material;
-import org.example.domain.enums.Style;
+import org.example.domain.parameters.BeddingSize;
+import org.example.domain.parameters.FillingMaterial;
+import org.example.domain.parameters.Material;
+import org.example.domain.parameters.Style;
 
 public class Bedclothing extends Inventory {
     private final BeddingSize beddingSize;
