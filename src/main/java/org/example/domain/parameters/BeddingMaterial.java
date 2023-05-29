@@ -1,6 +1,6 @@
 package org.example.domain.parameters;
 
-public enum Material {
+public enum BeddingMaterial {
     COTTON,
     LINEN,
     SILK,

@@ -5,11 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e03cfc8-3f86-4eb0-ae07-164bb75c7c27" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/Durability.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/parameters/DishMaterial.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/bedclothing.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/dish.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/Bedclothing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/Bedclothing.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/Dish.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/Dish.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/Inventory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/parameters/Material.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/parameters/BeddingMaterial.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +23,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
-        <option value="Enum" />
         <option value="Interface" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -55,6 +58,9 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>

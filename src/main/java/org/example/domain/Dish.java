@@ -6,13 +6,15 @@ public class Dish extends Inventory implements Durability {
     private final FoodSafety foodSafety;
     private final HeatResistance heatResistance;
     private final DishSize dishSize;
+    private final DishMaterial dishMaterial;
 
-    public Dish(int id, long price, int weight, Material material, Color color, Style style, int washingDurability,
+    public Dish(int id, long price, int weight, DishMaterial dishMaterial, Color color, Style style, int washingDurability,
                 int storageDurability, FoodSafety foodSafety, HeatResistance heatResistance, DishSize dishSize) {
-        super(id, price, weight, material, color, style, washingDurability, storageDurability);
+        super(id, price, weight, color, style, washingDurability, storageDurability);
         this.foodSafety = foodSafety;
         this.heatResistance = heatResistance;
         this.dishSize = dishSize;
+        this.dishMaterial = dishMaterial;
     }
 
     public FoodSafety getFoodSafety() {
@@ -27,13 +29,15 @@ public class Dish extends Inventory implements Durability {
         return dishSize;
     }
 
+    public DishMaterial getDishMaterial() { return dishMaterial; }
+
     @Override
     public String toString() {
         return "Dish{" +
                 "id=" + this.getId() +
                 ", price=" + this.getPrice() +
                 ", weight=" + this.getWeight() +
-                ", material=" + this.getMaterial() +
+                ", dishMaterial=" + dishMaterial +
                 ", color=" + this.getColor() +
                 ", style=" + this.getStyle() +
                 "foodSafety=" + foodSafety +
