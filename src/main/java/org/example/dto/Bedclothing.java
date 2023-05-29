@@ -1,6 +1,6 @@
-package org.example.domain;
+package org.example.dto;
 
-import org.example.domain.parameters.*;
+import org.example.dto.parameters.*;
 
 public class Bedclothing extends Inventory implements Durability {
     private final BeddingSize beddingSize;

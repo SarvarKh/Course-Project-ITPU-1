@@ -1,8 +1,7 @@
-package org.example.domain;
+package org.example.dto;
 
-import org.example.domain.parameters.Color;
-import org.example.domain.parameters.BeddingMaterial;
-import org.example.domain.parameters.Style;
+import org.example.dto.parameters.Color;
+import org.example.dto.parameters.Style;
 
 import java.io.Serializable;
 

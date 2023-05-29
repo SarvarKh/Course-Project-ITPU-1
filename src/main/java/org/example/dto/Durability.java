@@ -1,4 +1,4 @@
-package org.example.domain;
+package org.example.dto;
 
 public interface Durability {
     // x times can be washed

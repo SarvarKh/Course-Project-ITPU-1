@@ -1,6 +1,6 @@
-package org.example.domain;
+package org.example.dto;
 
-import org.example.domain.parameters.*;
+import org.example.dto.parameters.*;
 
 public class Dish extends Inventory implements Durability {
     private final FoodSafety foodSafety;

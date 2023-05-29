@@ -1,4 +1,4 @@
-package org.example.domain.parameters;
+package org.example.dto.parameters;
 
 public enum DishMaterial {
     EARTHENWARE,

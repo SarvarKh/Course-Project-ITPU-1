@@ -5,14 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e03cfc8-3f86-4eb0-ae07-164bb75c7c27" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/parameters/DishMaterial.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/bedclothing.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/dish.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/InventoryDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/Bedclothing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/Bedclothing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/Dish.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/Dish.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/Inventory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/parameters/Material.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/domain/parameters/BeddingMaterial.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/Bedclothing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/Bedclothing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/Dish.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/Dish.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/Durability.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/Durability.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/Inventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/Inventory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/parameters/BeddingMaterial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/parameters/BeddingMaterial.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/parameters/BeddingSize.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/parameters/BeddingSize.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/parameters/Color.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/parameters/Color.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/parameters/DishMaterial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/parameters/DishMaterial.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/parameters/DishSize.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/parameters/DishSize.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/parameters/FillingMaterial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/parameters/FillingMaterial.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/parameters/FoodSafety.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/parameters/FoodSafety.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/parameters/HeatResistance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/parameters/HeatResistance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/domain/parameters/Style.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/parameters/Style.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +30,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
-        <option value="Interface" />
         <option value="Enum" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
