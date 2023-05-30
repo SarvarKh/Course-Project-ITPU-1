@@ -20,18 +20,45 @@ public class InventoryServiceImpl implements InventoryService {
     }
 
     @Override
-    public List<Inventory> retrieveInventoryDataFilteredByColor(String color) {
+    public List<Inventory> retrieveInventoryDataFilteredByColor(String color, String type) {
         List<Inventory> all = dao.retrieveAllInventoryDataFromDataSource();
 
-        List<Inventory> filtered = filteredByColor(all, color);
+        List<Inventory> filtered = filteredByColor(all, color, type);
         return filtered;
     }
 
-    private static List<Inventory> filteredByColor(List<Inventory> all, String color) {
+    private List<Inventory> filteredByColor(List<Inventory> all, String color, String type) {
         List<Inventory> filtered = new ArrayList<>();
         for (Inventory inventory : all) {
-            if (color.equals(inventory.getColor().toString())) {
+            if (color.equals(inventory.getColor().toString()) &&
+                    type.equals(inventory.getClass().getSimpleName())) {
                 filtered.add(inventory);
+            } else if (color.equals(inventory.getColor().toString()) &&
+                    type.equals("All")) {
+                filtered.add(inventory);
+            }
+        }
+        return filtered;
+    }
+
+    @Override
+    public List<Inventory> retrieveInventoryDataFilteredByMinMax(String min, String max, String type) {
+        List<Inventory> all = dao.retrieveAllInventoryDataFromDataSource();
+
+        List<Inventory> filtered = filteredByMinMax(all, min, max, type);
+        return filtered;
+    }
+
+    private List<Inventory> filteredByMinMax(List<Inventory> all, String min, String max, String type) {
+        List<Inventory> filtered = new ArrayList<>();
+        for (Inventory inventory : all) {
+            if (Long.parseLong(min) <= inventory.getPrice() &&
+                    inventory.getPrice() <= Long.parseLong(max)) {
+                if (type.equals(inventory.getClass().getSimpleName())) {
+                    filtered.add(inventory);
+                } else if (type.equals("All")) {
+                    filtered.add(inventory);
+                }
             }
         }
         return filtered;
