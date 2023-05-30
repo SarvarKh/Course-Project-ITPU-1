@@ -8,6 +8,7 @@ import com.opencsv.CSVReaderBuilder;
 import com.opencsv.exceptions.CsvException;
 import org.example.dto.Inventory;
 import org.example.rowmapper.CustomStringToBedclothingDataRowMapper;
+import org.example.rowmapper.CustomStringToDishDataRowMapper;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -16,23 +17,33 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class InventoryCsvBasedDaoImpl implements InventoryDao {
-    private static final String PATH_TO_DATA_SOURCE = "/Users/sarvarkhalimov/Documents/ITPU/" +
+    private static final String PATH_TO_DATA_SOURCE_BEDCLOTHES = "/Users/sarvarkhalimov/Documents/ITPU/" +
             "Programming - Course Project/Course-Project-ITPU-1/src/main/resources/bedclothing.csv";
+
+    private static final String PATH_TO_DATA_SOURCE_DISHES = "/Users/sarvarkhalimov/Documents/ITPU/" +
+            "Programming - Course Project/Course-Project-ITPU-1/src/main/resources/dish.csv";
 
     @Override
     public List<Inventory> retrieveAllInventoryDataFromDataSource() {
-        List<String[]> allData = fetchDataFromCsvFile();
+        List<String[]> allDataBedclothing = fetchDataFromCsvFile(PATH_TO_DATA_SOURCE_BEDCLOTHES);
+        List<String[]> allDataDish = fetchDataFromCsvFile(PATH_TO_DATA_SOURCE_DISHES);
 
-        removeHeaderDataFromPureDataSet(allData);
+        removeHeaderDataFromPureDataSet(allDataBedclothing);
+        removeHeaderDataFromPureDataSet(allDataDish);
 
-        List<Inventory> dataResulted = transformStringDataIntoDtoBasedCollection(allData);
-        return dataResulted;
+        List<Inventory> dataResultedBedclothing = transformStringBedclothingDataIntoDtoBasedCollection(allDataBedclothing);
+        List<Inventory> dataResultedDish = transformStringDishDataIntoDtoBasedCollection(allDataDish);
+
+        List<Inventory> combinedList = new ArrayList<>();
+        combinedList.addAll(dataResultedBedclothing);
+        combinedList.addAll(dataResultedDish);
+        return combinedList;
     }
 
-    private static List<String[]> fetchDataFromCsvFile() {
+    private static List<String[]> fetchDataFromCsvFile(String path) {
         FileReader filereader = null;
         try {
-            filereader = new FileReader(PATH_TO_DATA_SOURCE);
+            filereader = new FileReader(path);
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
@@ -52,8 +63,21 @@ public class InventoryCsvBasedDaoImpl implements InventoryDao {
         return allData;
     }
 
-    private List<Inventory> transformStringDataIntoDtoBasedCollection(List<String[]> allData) {
+    private List<Inventory> transformStringBedclothingDataIntoDtoBasedCollection(List<String[]> allData) {
         CustomStringToBedclothingDataRowMapper rowMapper =new CustomStringToBedclothingDataRowMapper();
+        List<Inventory> result = new ArrayList<>();
+
+//        for (String[] row : allData.subList(0,5)) {
+        for (String[] row : allData) {
+            Inventory sd = rowMapper.mapRaw(row);
+
+            result.add(sd);
+        }
+        return result;
+    }
+
+    private List<Inventory> transformStringDishDataIntoDtoBasedCollection(List<String[]> allData) {
+        CustomStringToDishDataRowMapper rowMapper = new CustomStringToDishDataRowMapper();
         List<Inventory> result = new ArrayList<>();
 
 //        for (String[] row : allData.subList(0,5)) {
