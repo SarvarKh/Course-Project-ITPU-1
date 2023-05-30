@@ -15,7 +15,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        System.out.println("Starting application...");
+        System.out.println("Starting application...\n-=-=-=-=-*****-=-=-=-=-");
         InventoryDao dao = new InventoryCsvBasedDaoImpl();
         InventoryService service = new InventoryServiceImpl(dao);
         List<String> userInput = getUserInput();
@@ -33,8 +33,8 @@ public class Main {
     }
 
     private static List<String> getUserInput() throws IOException {
-        System.out.println("Please, enter 1 to retrieve all inventory,");
-        System.out.println("Or enter 2 to retrieve only specific inventories by color");
+        System.out.println("Please, enter: \n1 to retrieve all inventory, or");
+        System.out.println("2 to retrieve only specific inventories by color");
 
         BufferedReader reader = new BufferedReader(
                 new InputStreamReader(System.in));
