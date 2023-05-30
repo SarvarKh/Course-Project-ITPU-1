@@ -18,8 +18,7 @@ public class Main {
         System.out.println("Starting application...\n-=-=-=-=-*****-=-=-=-=-");
         InventoryDao dao = new InventoryCsvBasedDaoImpl();
         InventoryService service = new InventoryServiceImpl(dao);
-//        List<String> userInput = getUserInput();
-        List<String> userInput = new ArrayList<>();
+        List<String> userInput = getUserInput();
 
         if (userInput.size() == 0){
             System.out.println("There were no filtering params.");

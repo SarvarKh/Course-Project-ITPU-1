@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e03cfc8-3f86-4eb0-ae07-164bb75c7c27" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/rowmapper/CustomStringToDishDataRowMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/impl/InventoryCsvBasedDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/impl/InventoryCsvBasedDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dto/Dish.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dto/Dish.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/dish.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/dish.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
