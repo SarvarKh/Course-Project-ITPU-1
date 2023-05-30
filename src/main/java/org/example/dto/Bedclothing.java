@@ -1,14 +1,16 @@
-package org.example.domain;
+package org.example.dto;
 
-import org.example.domain.parameters.*;
+import org.example.dto.parameters.*;
 
 public class Bedclothing extends Inventory implements Durability {
     private final BeddingSize beddingSize;
     private final FillingMaterial fillingMaterial;
+    private final BeddingMaterial beddingMaterial;
 
-    public Bedclothing(int id, long price, int weight, Material material, Color color, Style style,
+    public Bedclothing(int id, long price, int weight, BeddingMaterial beddingMaterial, Color color, Style style,
                        int washingDurability, int storageDurability, BeddingSize beddingSize, FillingMaterial fillingMaterial) {
-        super(id, price, weight, material, color, style, washingDurability, storageDurability);
+        super(id, price, weight, color, style, washingDurability, storageDurability);
+        this.beddingMaterial = beddingMaterial;
         this.beddingSize = beddingSize;
         this.fillingMaterial = fillingMaterial;
     }
@@ -21,13 +23,15 @@ public class Bedclothing extends Inventory implements Durability {
         return fillingMaterial;
     }
 
+    public BeddingMaterial getBeddingMaterial() { return beddingMaterial; }
+
     @Override
     public String toString() {
         return "Bedclothing{" +
                 "id=" + this.getId() +
                 ", price=" + this.getPrice() +
                 ", weight=" + this.getWeight() +
-                ", material=" + this.getMaterial() +
+                ", beddingMaterial=" + beddingMaterial +
                 ", color=" + this.getColor() +
                 ", style=" + this.getStyle() +
                 "beddingSize=" + beddingSize +
@@ -39,11 +43,11 @@ public class Bedclothing extends Inventory implements Durability {
 
     @Override
     public int getWashingDurability() {
-        return this.getWashingDurability();
+        return super.getWashingDurability();
     }
 
     @Override
     public int getStorageDurability() {
-        return this.getStorageDurability();
+        return super.getStorageDurability();
     }
 }

@@ -1,8 +1,7 @@
-package org.example.domain;
+package org.example.dto;
 
-import org.example.domain.parameters.Color;
-import org.example.domain.parameters.Material;
-import org.example.domain.parameters.Style;
+import org.example.dto.parameters.Color;
+import org.example.dto.parameters.Style;
 
 import java.io.Serializable;
 
@@ -10,18 +9,16 @@ public abstract class Inventory implements Serializable {
     private final int id;
     private final long price;
     private final int weight;
-    private final Material material;
     private final Color color;
     private final Style style;
-    private final int washingDurability;
-    private final int storageDurability;
+    private final int washingDurability; // x times can be washed
+    private final int storageDurability; // x years can be stored
 
-    public Inventory(int id, long price, int weight, Material material, Color color, Style style,
+    public Inventory(int id, long price, int weight, Color color, Style style,
                      int washingDurability, int storageDurability) {
         this.id = id;
         this.price = price;
         this.weight = weight;
-        this.material = material;
         this.color = color;
         this.style = style;
         this.washingDurability = washingDurability;
@@ -38,10 +35,6 @@ public abstract class Inventory implements Serializable {
 
     public int getWeight() {
         return weight;
-    }
-
-    public Material getMaterial() {
-        return material;
     }
 
     public Color getColor() {
@@ -66,7 +59,6 @@ public abstract class Inventory implements Serializable {
                 "id=" + id +
                 ", price=" + price +
                 ", weight=" + weight +
-                ", material=" + material +
                 ", color=" + color +
                 ", style=" + style +
                 ", washingDurability=" + washingDurability +
