@@ -43,11 +43,11 @@ public class Bedclothing extends Inventory implements Durability {
 
     @Override
     public int getWashingDurability() {
-        return this.getWashingDurability();
+        return super.getWashingDurability();
     }
 
     @Override
     public int getStorageDurability() {
-        return this.getStorageDurability();
+        return super.getStorageDurability();
     }
 }

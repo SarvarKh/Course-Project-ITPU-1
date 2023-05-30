@@ -12,7 +12,6 @@ import org.example.rowmapper.CustomStringToBedclothingDataRowMapper;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,7 +36,7 @@ public class InventoryCsvBasedDaoImpl implements InventoryDao {
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
-        CSVParser parser = new CSVParserBuilder()/*.withSeparator(rawSeparator)*/.build();
+        CSVParser parser = new CSVParserBuilder().withSeparator(';').build();
         CSVReader csvReader = new CSVReaderBuilder(filereader)
                 .withCSVParser(parser)
                 .build();
