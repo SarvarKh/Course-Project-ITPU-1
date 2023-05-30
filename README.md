@@ -14,7 +14,8 @@
 
 <div style="display: flex; flex-wrap: wrap">
 <div align="center">
-  <img src="image/01_console.png?raw=true" width="80%" height="auto"/>
+  <img src="image/01_console.png?raw=true" width="90%" height="auto"/>
+  <img src="image/02_console.png.png?raw=true" width="90%" height="auto"/>
 </div>
 </div>
 
@@ -26,14 +27,16 @@ To get started with this project, follow these steps:
 - Install in pom.xml file.
 - Run the application using your IDEA's run button on Main class.
 - Console window will be opened.
-- you can play around with this interactive console to retrieve all inventories or by their color;
+- you can play around with this interactive console to retrieve all inventories or by their parameters;
 
 ## Features
 This project includes the following features:
 
 - Parsing inventories (Bedclothing and Dish .csv files)
 - Mapping parsed Strings from .csv files to the corresponding DTO entities
-- Retrieve all inventories or by their color
+- Retrieve all inventories
+- Retrieve all inventories by color and inventory type
+- Retrieve all inventories by price (min, max) and inventory type
 
 
 ## Technologies Used
