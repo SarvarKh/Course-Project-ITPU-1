@@ -38,6 +38,8 @@ This project includes the following features:
 - Retrieve all inventories by color and inventory type
 - Retrieve all inventories by price (min, max) and inventory type
 
+## Testing
+- Dish and Bedclothing mapRow methods
 
 ## Technologies Used
 This project was built using the following technologies:
