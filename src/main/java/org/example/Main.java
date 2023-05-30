@@ -32,7 +32,12 @@ public class Main {
             printFilteredDataByColorAndType(service, filteringColorParam, filteringTypeParam);
         } else {
             // Search by price will have list.size() == 3 (min, max, inventType)
-
+            String filteringMinParam = String.valueOf(userInput.get(0));
+            String filteringMaxParam = String.valueOf(userInput.get(1));
+            String filteringTypeParam = String.valueOf(userInput.get(2));
+            System.out.println("Filtering min is "+ filteringMinParam + ", max is " + filteringMaxParam +
+                    " and type is " +filteringTypeParam);
+            printFilteredDataByMinMaxType(service, filteringMinParam, filteringMaxParam, filteringTypeParam);
         }
     }
 
@@ -51,8 +56,7 @@ public class Main {
         } else if (input.equals("2")) {
             result = selectColorAndInventType();
         } else if (input.equals("3")) {
-//            need to work
-            return null;
+            result = selectMinMaxType();
         } else {
             System.out.println("\n!WARNING: You entered invalid number, please only enter 1 or 2");
             getUserInput();
@@ -78,17 +82,42 @@ public class Main {
         }
         String color = Color.values()[Integer.parseInt(input)].toString();
 
-        // Select inventory type
+        String inventoryType = selectInventoryType();
+
+        return new ArrayList<>(Arrays.asList(color, inventoryType));
+    }
+
+    private static List<String> selectMinMaxType() throws IOException {
+        String min = selectInputMinMax("min");
+        String max = selectInputMinMax("max");
+        String type = selectInventoryType();
+
+        return new ArrayList<>(Arrays.asList(min, max, type));
+    }
+
+    private static String selectInputMinMax(String parameter) throws IOException {
+        System.out.println("Enter " + parameter + " value");
+        BufferedReader reader = new BufferedReader(
+                new InputStreamReader(System.in));
+        String input = reader.readLine();
+        if (!input.matches("^[1-9][0-9]*$")) {
+            System.out.println("\n!WARNING: You entered invalid input, please only enter numbers (no letters, symbols, etc.)");
+            selectInputMinMax(parameter);
+        }
+        return input;
+    }
+
+    private static String selectInventoryType() throws IOException {
         System.out.println("Now enter type of inventory you want to retrieve:" +
                 "\n1 - All" +
                 "\n2 - Bedclothing" +
                 "\n3 - Dishes");
         BufferedReader reader2 = new BufferedReader(
                 new InputStreamReader(System.in));
-        String input2 = reader.readLine();
+        String input2 = reader2.readLine();
         if (!input2.matches("^([1-3])$")) {
             System.out.println("\n!WARNING: You entered invalid number, please only enter numbers between 1 and 3");
-            selectColorAndInventType();
+            selectInventoryType();
         }
         String inventoryType = "All";
         if (input2.equals("2")) {
@@ -96,12 +125,19 @@ public class Main {
         } else if (input2.equals("3")) {
             inventoryType = "Dish";
         }
-
-        return new ArrayList<>(Arrays.asList(color, inventoryType));
+        return inventoryType;
     }
 
     private static void printFilteredDataByColorAndType(InventoryService service, String filteringColorParam, String filteringTypeParam) {
         List<Inventory> inventoryData = service.retrieveInventoryDataFilteredByColor(filteringColorParam, filteringTypeParam);
+
+        for (Inventory item : inventoryData) {
+            System.out.println(item);
+        }
+    }
+
+    private static void printFilteredDataByMinMaxType(InventoryService service, String filteringMinParam, String filteringMaxParam, String filteringTypeParam) {
+        List<Inventory> inventoryData = service.retrieveInventoryDataFilteredByMinMax(filteringMinParam, filteringMaxParam, filteringTypeParam);
 
         for (Inventory item : inventoryData) {
             System.out.println(item);
