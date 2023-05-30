@@ -30,7 +30,7 @@ public class InventoryServiceImpl implements InventoryService {
     private static List<Inventory> filteredByColor(List<Inventory> all, String color) {
         List<Inventory> filtered = new ArrayList<>();
         for (Inventory inventory : all) {
-            if (color.equals(inventory.getColor())) {
+            if (color.equals(inventory.getColor().toString())) {
                 filtered.add(inventory);
             }
         }

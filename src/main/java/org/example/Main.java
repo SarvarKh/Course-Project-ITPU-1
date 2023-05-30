@@ -27,7 +27,6 @@ public class Main {
         } else {
             String filteringParam = fetchFilteringParam(userInput);
             System.out.println("Color for filtering is "+ filteringParam);
-
             printFilteredDataByColor(service, filteringParam);
         }
     }
