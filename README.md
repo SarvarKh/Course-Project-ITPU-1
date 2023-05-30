@@ -15,7 +15,7 @@
 <div style="display: flex; flex-wrap: wrap">
 <div align="center">
   <img src="image/01_console.png?raw=true" width="90%" height="auto"/>
-  <img src="image/02_console.png.png?raw=true" width="90%" height="auto"/>
+  <img src="image/02_console.png?raw=true" width="90%" height="auto"/>
 </div>
 </div>
 
@@ -53,7 +53,8 @@ This project was built using the following technologies:
 - GitHub: [SarvarKh](https://github.com/SarvarKh)
 - Twitter: [KhalimovSarvar](https://twitter.com/KhalimovSarvar)
 - LinkedIn: [Sarvar-Khalimov](https://www.linkedin.com/in/sarvar-khalimov/)
--
+
+
 ## Contributing
 If you would like to contribute to this project, please follow these steps:
 
