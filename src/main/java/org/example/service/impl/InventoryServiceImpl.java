@@ -20,17 +20,21 @@ public class InventoryServiceImpl implements InventoryService {
     }
 
     @Override
-    public List<Inventory> retrieveInventoryDataFilteredByColor(String color) {
+    public List<Inventory> retrieveInventoryDataFilteredByColor(String color, String type) {
         List<Inventory> all = dao.retrieveAllInventoryDataFromDataSource();
 
-        List<Inventory> filtered = filteredByColor(all, color);
+        List<Inventory> filtered = filteredByColor(all, color, type);
         return filtered;
     }
 
-    private static List<Inventory> filteredByColor(List<Inventory> all, String color) {
+    private static List<Inventory> filteredByColor(List<Inventory> all, String color, String type) {
         List<Inventory> filtered = new ArrayList<>();
         for (Inventory inventory : all) {
-            if (color.equals(inventory.getColor().toString())) {
+            if (color.equals(inventory.getColor().toString()) &&
+                    type.equals(inventory.getClass().getSimpleName())) {
+                filtered.add(inventory);
+            } else if (color.equals(inventory.getColor().toString()) &&
+                    type.equals("All")) {
                 filtered.add(inventory);
             }
         }
