@@ -1,0 +1,3 @@
+id;price;weight;beddingMaterial;color;style;washingDurability;storageDurability;beddingSize;fillingMaterial
+1;111;1;COTTON;RED;MODERN;100;3;TWIN;DOWN
+2;222;1;SILK;ORANGE;TRADITIONAL;150;4;KING;FEATHERS
