@@ -13,14 +13,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class InventoryCsvBasedDaoImpl implements InventoryDao {
-    private static final String PATH_TO_DATA_SOURCE_BEDCLOTHES = "/bedclothing.csv";
-
-    private static final String PATH_TO_DATA_SOURCE_DISHES = "/dish.csv";
-
     @Override
-    public List<Inventory> retrieveAllInventoryDataFromDataSource() {
-        List<String[]> allDataBedclothing = removeHeaderDataFromPureDataSet(fetchDataFromCsvFile(PATH_TO_DATA_SOURCE_BEDCLOTHES));
-        List<String[]> allDataDish = removeHeaderDataFromPureDataSet(fetchDataFromCsvFile(PATH_TO_DATA_SOURCE_DISHES));
+    public List<Inventory> retrieveAllInventoryDataFromDataSource(String pathToBedclothing, String pathToDishes) {
+        List<String[]> allDataBedclothing = removeHeaderDataFromPureDataSet(fetchDataFromCsvFile(pathToBedclothing));
+        List<String[]> allDataDish = removeHeaderDataFromPureDataSet(fetchDataFromCsvFile(pathToDishes));
 
         List<Inventory> dataResultedBedclothing = transformStringBedclothingDataIntoDtoBasedCollection(allDataBedclothing);
         List<Inventory> dataResultedDish = transformStringDishDataIntoDtoBasedCollection(allDataDish);
