@@ -39,7 +39,8 @@ This project includes the following features:
 - Retrieve all inventories by price (min, max) and inventory type
 
 ## Testing
-- Dish and Bedclothing mapRow methods
+- Dish and Bedclothing mapRow methods - unit tested
+- Inventory DAO methods - unit tested
 
 ## Technologies Used
 This project was built using the following technologies:
