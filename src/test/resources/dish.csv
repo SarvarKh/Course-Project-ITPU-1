@@ -1,0 +1,3 @@
+id;price;weight;dishMaterial;color;style;washingDurability;storageDurability;foodSafety;heatResistance;dishSize
+1;22;2;EARTHENWARE;RED;MODERN;1000;15;HIGH_FOOD_GRADE;EXTREME;SMALL
+2;33;3;PORCELAIN;ORANGE;MODERN;1200;17;MEDIUM_NON_ALLERGENIC;HIGH;MEDIUM

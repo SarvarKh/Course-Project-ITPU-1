@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3e03cfc8-3f86-4eb0-ae07-164bb75c7c27" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/impl/InventoryCsvBasedDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/impl/InventoryCsvBasedDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/dao/impl/InventoryCsvBasedDaoImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/dao/impl/InventoryCsvBasedDaoImplTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +20,7 @@
         <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -47,6 +49,9 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_opened_file_path": "/Users/sarvarkhalimov/Documents/ITPU/Programming - Course Project/Course-Project-ITPU-1/src/test/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -59,11 +64,20 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/resources" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/image" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.example.dao.impl" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.CustomStringToDishDataRowMapperTest.mapRowTest">
+  <component name="RunManager" selected="JUnit.InventoryCsvBasedDaoImplTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="Course-Project-ITPU-1" />
@@ -77,27 +91,64 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CustomStringToBedclothingDataRowMapperTest.mapRowTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="InventoryCsvBasedDaoImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Course-Project-ITPU-1" />
-      <option name="PACKAGE_NAME" value="rowmapper" />
-      <option name="MAIN_CLASS_NAME" value="rowmapper.CustomStringToBedclothingDataRowMapperTest" />
-      <option name="METHOD_NAME" value="mapRowTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.dao.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.dao.impl" />
+      <option name="MAIN_CLASS_NAME" value="org.example.dao.impl.InventoryCsvBasedDaoImplTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InventoryCsvBasedDaoImplTest.fetchDataFromCsvFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Course-Project-ITPU-1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.dao.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.dao.impl" />
+      <option name="MAIN_CLASS_NAME" value="org.example.dao.impl.InventoryCsvBasedDaoImplTest" />
+      <option name="METHOD_NAME" value="fetchDataFromCsvFile" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CustomStringToDishDataRowMapperTest.mapRowTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="InventoryCsvBasedDaoImplTest.retrieveAllInventoryDataFromDataSource" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Course-Project-ITPU-1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="rowmapper.*" />
+          <option name="PATTERN" value="org.example.dao.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="rowmapper" />
-      <option name="MAIN_CLASS_NAME" value="rowmapper.CustomStringToDishDataRowMapperTest" />
-      <option name="METHOD_NAME" value="mapRowTest" />
+      <option name="PACKAGE_NAME" value="org.example.dao.impl" />
+      <option name="MAIN_CLASS_NAME" value="org.example.dao.impl.InventoryCsvBasedDaoImplTest" />
+      <option name="METHOD_NAME" value="retrieveAllInventoryDataFromDataSource" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InventoryCsvBasedDaoImplTest.retrieveAllInventoryDataFromDataSourceWhenNoResource" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Course-Project-ITPU-1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.dao.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.dao.impl" />
+      <option name="MAIN_CLASS_NAME" value="org.example.dao.impl.InventoryCsvBasedDaoImplTest" />
+      <option name="METHOD_NAME" value="retrieveAllInventoryDataFromDataSourceWhenNoResource" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -105,9 +156,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CustomStringToDishDataRowMapperTest.mapRowTest" />
-        <item itemvalue="JUnit.CustomStringToBedclothingDataRowMapperTest.mapRowTest" />
+        <item itemvalue="JUnit.InventoryCsvBasedDaoImplTest" />
+        <item itemvalue="JUnit.InventoryCsvBasedDaoImplTest.fetchDataFromCsvFile" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.InventoryCsvBasedDaoImplTest.retrieveAllInventoryDataFromDataSource" />
+        <item itemvalue="JUnit.InventoryCsvBasedDaoImplTest.retrieveAllInventoryDataFromDataSourceWhenNoResource" />
       </list>
     </recent_temporary>
   </component>
@@ -122,6 +175,7 @@
       <workItem from="1684823111625" duration="1246000" />
       <workItem from="1684840088470" duration="612000" />
       <workItem from="1685294356299" duration="11095000" />
+      <workItem from="1685510116971" duration="8055000" />
     </task>
     <servers />
   </component>
