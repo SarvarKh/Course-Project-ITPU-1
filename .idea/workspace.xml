@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e03cfc8-3f86-4eb0-ae07-164bb75c7c27" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/dao/impl/InventoryCsvBasedDaoImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/bedclothing.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/dish.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/impl/InventoryCsvBasedDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/impl/InventoryCsvBasedDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/rowmapper/CustomStringToBedclothingDataRowMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/rowmapper/CustomStringToBedclothingDataRowMapperTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/rowmapper/CustomStringToDishDataRowMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/rowmapper/CustomStringToDishDataRowMapperTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +24,7 @@
         <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -47,6 +53,9 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_opened_file_path": "/Users/sarvarkhalimov/Documents/ITPU/Programming - Course Project/Course-Project-ITPU-1/src/test/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -59,8 +68,17 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/resources" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/image" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.example.dao.impl" />
     </key>
   </component>
   <component name="RunManager" selected="JUnit.CustomStringToDishDataRowMapperTest.mapRowTest">
@@ -122,6 +140,7 @@
       <workItem from="1684823111625" duration="1246000" />
       <workItem from="1684840088470" duration="612000" />
       <workItem from="1685294356299" duration="11095000" />
+      <workItem from="1685510116971" duration="3078000" />
     </task>
     <servers />
   </component>

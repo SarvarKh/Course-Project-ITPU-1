@@ -1,35 +1,26 @@
 package org.example.dao.impl;
 
 import org.example.dao.InventoryDao;
-import com.opencsv.CSVParser;
-import com.opencsv.CSVParserBuilder;
-import com.opencsv.CSVReader;
-import com.opencsv.CSVReaderBuilder;
-import com.opencsv.exceptions.CsvException;
 import org.example.dto.Inventory;
 import org.example.rowmapper.CustomStringToBedclothingDataRowMapper;
 import org.example.rowmapper.CustomStringToDishDataRowMapper;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
+import java.net.URISyntaxException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 
 public class InventoryCsvBasedDaoImpl implements InventoryDao {
-    private static final String PATH_TO_DATA_SOURCE_BEDCLOTHES = "/Users/sarvarkhalimov/Documents/ITPU/" +
-            "Programming - Course Project/Course-Project-ITPU-1/src/main/resources/bedclothing.csv";
+    private static final String PATH_TO_DATA_SOURCE_BEDCLOTHES = "/bedclothing.csv";
 
-    private static final String PATH_TO_DATA_SOURCE_DISHES = "/Users/sarvarkhalimov/Documents/ITPU/" +
-            "Programming - Course Project/Course-Project-ITPU-1/src/main/resources/dish.csv";
+    private static final String PATH_TO_DATA_SOURCE_DISHES = "/dish.csv";
 
     @Override
     public List<Inventory> retrieveAllInventoryDataFromDataSource() {
-        List<String[]> allDataBedclothing = fetchDataFromCsvFile(PATH_TO_DATA_SOURCE_BEDCLOTHES);
-        List<String[]> allDataDish = fetchDataFromCsvFile(PATH_TO_DATA_SOURCE_DISHES);
-
-        removeHeaderDataFromPureDataSet(allDataBedclothing);
-        removeHeaderDataFromPureDataSet(allDataDish);
+        List<String[]> allDataBedclothing = removeHeaderDataFromPureDataSet(fetchDataFromCsvFile(PATH_TO_DATA_SOURCE_BEDCLOTHES));
+        List<String[]> allDataDish = removeHeaderDataFromPureDataSet(fetchDataFromCsvFile(PATH_TO_DATA_SOURCE_DISHES));
 
         List<Inventory> dataResultedBedclothing = transformStringBedclothingDataIntoDtoBasedCollection(allDataBedclothing);
         List<Inventory> dataResultedDish = transformStringDishDataIntoDtoBasedCollection(allDataDish);
@@ -41,26 +32,14 @@ public class InventoryCsvBasedDaoImpl implements InventoryDao {
     }
 
     private static List<String[]> fetchDataFromCsvFile(String path) {
-        FileReader filereader = null;
         try {
-            filereader = new FileReader(path);
-        } catch (FileNotFoundException e) {
+            return Files.readAllLines(Path.of(InventoryCsvBasedDaoImpl.class.getResource(path).toURI()))
+                    .stream()
+                    .map(s-> s.split(";"))
+                    .toList();
+        } catch (IOException | URISyntaxException e) {
             throw new RuntimeException(e);
         }
-        CSVParser parser = new CSVParserBuilder().withSeparator(';').build();
-        CSVReader csvReader = new CSVReaderBuilder(filereader)
-                .withCSVParser(parser)
-                .build();
-
-        List<String[]> allData;
-        try {
-            allData = csvReader.readAll();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        } catch (CsvException e) {
-            throw new RuntimeException(e);
-        }
-        return allData;
     }
 
     private List<Inventory> transformStringBedclothingDataIntoDtoBasedCollection(List<String[]> allData) {
@@ -89,7 +68,7 @@ public class InventoryCsvBasedDaoImpl implements InventoryDao {
         return result;
     }
 
-    private void removeHeaderDataFromPureDataSet(List<String[]> allData) {
-        allData.remove(0);
+    private List<String[]> removeHeaderDataFromPureDataSet(List<String[]> allData) {
+        return allData.subList(1, allData.size());
     }
 }
