@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3e03cfc8-3f86-4eb0-ae07-164bb75c7c27" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/impl/InventoryCsvBasedDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/impl/InventoryCsvBasedDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/dao/impl/InventoryCsvBasedDaoImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/dao/impl/InventoryCsvBasedDaoImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,8 +18,8 @@
       <list>
         <option value="Enum" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -77,7 +76,7 @@
       <recent name="org.example.dao.impl" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.InventoryCsvBasedDaoImplTest">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
       <module name="Course-Project-ITPU-1" />
@@ -156,9 +155,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.InventoryCsvBasedDaoImplTest" />
         <item itemvalue="JUnit.InventoryCsvBasedDaoImplTest.fetchDataFromCsvFile" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.InventoryCsvBasedDaoImplTest.retrieveAllInventoryDataFromDataSource" />
         <item itemvalue="JUnit.InventoryCsvBasedDaoImplTest.retrieveAllInventoryDataFromDataSourceWhenNoResource" />
       </list>
@@ -175,7 +174,7 @@
       <workItem from="1684823111625" duration="1246000" />
       <workItem from="1684840088470" duration="612000" />
       <workItem from="1685294356299" duration="11095000" />
-      <workItem from="1685510116971" duration="8055000" />
+      <workItem from="1685510116971" duration="9030000" />
     </task>
     <servers />
   </component>
