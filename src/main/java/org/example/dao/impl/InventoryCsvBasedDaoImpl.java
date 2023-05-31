@@ -27,7 +27,7 @@ public class InventoryCsvBasedDaoImpl implements InventoryDao {
         return combinedList;
     }
 
-    private static List<String[]> fetchDataFromCsvFile(String path) {
+    List<String[]> fetchDataFromCsvFile(String path) {
         try {
             return Files.readAllLines(Path.of(InventoryCsvBasedDaoImpl.class.getResource(path).toURI()))
                     .stream()
@@ -38,7 +38,7 @@ public class InventoryCsvBasedDaoImpl implements InventoryDao {
         }
     }
 
-    private List<Inventory> transformStringBedclothingDataIntoDtoBasedCollection(List<String[]> allData) {
+    List<Inventory> transformStringBedclothingDataIntoDtoBasedCollection(List<String[]> allData) {
         CustomStringToBedclothingDataRowMapper rowMapper =new CustomStringToBedclothingDataRowMapper();
         List<Inventory> result = new ArrayList<>();
 
